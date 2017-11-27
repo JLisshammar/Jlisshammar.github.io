@@ -28,8 +28,20 @@
 <img class="slides" src="http://hydeparkwinterwonderland.com/wp-content/uploads/2016/11/HPWW_15_Bavarian-Village_SMITH_GJS2481-1000x350.jpg">
 <img class="slides" src="http://theresident.wpms.greatbritishlife.co.uk/wp-content/uploads/sites/10/2017/01/Winter-Coppa-Club-Igloos-1.jpg">
 	
-<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+}
 		
 	#map {
    width: 100%;
