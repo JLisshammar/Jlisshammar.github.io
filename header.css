@@ -1,0 +1,29 @@
+
+		.title { 
+		background-image: url(https://media3.s-nbcnews.com/i/newscms/2016_52/1184898/cocktail-bar-drinks-pour-stock-today-161229-tease_5fb04dff2d7044537cf76aab2b715f99.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		color: #ffffff;
+		text-shadow: 2px 2px #000000;
+		text-align: center;
+		padding: 200px 0px;
+		margin-bottom: 100px;
+	}
+	.main {
+		font-size: 80px;
+		font: sans-serif;
+
+	}
+	@font-face {
+    font-family: Amaranth-Regular;
+    src: url(./amaranth/Amaranth-Regular.otf);
+	}
+	@font-face {
+		font-family: quicksand; 
+		src: url(./quicksand/Quicksand-Light.otf);
+	}
+	@font-face {
+		font-family: Ostrich;
+		src: url(./ostrichsans/OstrichSansInline-Regular.otf);
+	}
