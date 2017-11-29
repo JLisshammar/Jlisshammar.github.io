@@ -1,10 +1,13 @@
 <!DOCTYPE html>
+<html>
 <head>
 	<meta charset="utf-8">
  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
  	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="./header.css">
-	<link href='./css/bootstrap.css' rel='stylesheet'>
+	<!-- <link href='./css/bootstrap.css' rel='stylesheet'> -->
+	<link href="https://getbootstrap.com/docs/3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/3.3/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 	<title>Events</title>
 	<style type="text/css">
 	body {
@@ -96,11 +99,40 @@
 		font-family: 'Quicksand';
 		border-left: 10px solid white;
 	}
+	.map {
+		min-height: 400px;
+		width: 100%;
+		border: 10px double #ffffff; 
+	}
 </style>
-<link rel="stylesheet" type="text/css" href="./banner.css">
+<link rel="stylesheet" href="./banner.css">
 </head>
 <body>
-	<iframe class="bananas" src="./newbanner.html"></iframe>
+<!--BEGINNING OF BANNER HTML-->
+<div id="topbanner">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          	<div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            	<a class="navbar-brand" href="./index.html" target="_top">Home</a>
+            	
+          	</div>
+          	<div id="navbar" class="navbar-collapse collapse">
+            	<ul class="nav navbar-nav navbar-right">
+             		<li><a href="./index_drinks.html" target="_top">Nightlife</a></li>
+              		<li><a href="./index_events.html" target="_top">Events</a></li>
+              		<li><a href="./index_markets.html" target="_top">Markets</a></li>
+            	</ul>
+        	</div>
+        </div>
+    </nav>
+ </div><!--/.nav-collapse -->
+ <!--END OF BANNER HTML-->
 	<div class = "title"> 
 			<div class = "main"> Markets </div>
 		</div>
@@ -211,30 +243,12 @@
 		</div>
 	</div>
 	<!-- ------------------------------------------------------------------------------------ -->
-		<div id="map"></div>
-		<script>
-      function initMap() {
-        var temple = {lat: 51.511113, lng: -0.113804};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: temple
-        });
-        var marker = new google.maps.Marker({
-          position: temple,
-          map: map
-        });
-        var markerB = new google.maps.Marker({
-          position: {lat: 51.521113, lng: -0.113804},
-          map: map
-        });
-        var markerC = new google.maps.Marker({
-          position: {lat: 51.501113, lng: -0.113804},
-          map: map
-        });
-      }
-    </script>
-    <script async defer
+    <iframe src="./smallhorses.html" class="map">MAP</iframe>
+    <!-- <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBCW8IQLeOjOtmpQyD6EpDIHI35uM_qc4&callback=initMap">
-    </script>
+    </script> -->
 </div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://getbootstrap.com/docs/3.3/dist/js/bootstrap.min.js"></script>
 </body>
+</html>
